@@ -1,0 +1,18 @@
+th = input('Enter threshold: ');
+
+for i = 1:128
+    for j = 1:128
+        r = A(i,j);
+        if (0 <= r <= th):
+            C(i,j) = 255;
+        else
+            C(i,j) = 0;
+        end
+    end
+end
+
+imwrite(C,'imthr.bmp')
+
+subplot(2,2,3)
+imshow(C)
+title('Threshold')
