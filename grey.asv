@@ -1,0 +1,16 @@
+for i = 1:128
+    for j = 1:128
+        r = A(i,j);
+        if r <= 255
+            D(i,j) = 255;
+        else
+            D(i,j) = 0;
+        end
+    end
+end
+
+imwrite(C,'imthr.bmp')
+
+subplot(2,2,1)
+imshow(C)
+title('Threshold')
